@@ -6,17 +6,24 @@ import {
   profileDataset,
   type DatasetProfile,
 } from "./features/analysis/profiler";
+import { ChartView } from "./components/ChartView";
+import { queryComparison } from "./features/analysis/query";
+import type { EChartsCoreOption } from "echarts/core";
 
 export function App() {
   const [dataset, setDataset] = useState<DatasetInfo | null>(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [profile, setProfile] = useState<DatasetProfile | null>(null);
+  const [chartOption, setChartOption] = useState<EChartsCoreOption | null>(
+    null,
+  );
   async function handleFileSelected(file: File) {
     setLoading(true);
     setError(null);
     setDataset(null);
     setProfile(null);
+    setChartOption(null);
 
     try {
       const result = await loadDataset(file);
@@ -24,6 +31,52 @@ export function App() {
 
       const statistics = await profileDataset(result);
       setProfile(statistics);
+
+      const dimension = result.columns.find(
+        (column) => column.type === "VARCHAR",
+      );
+
+      const metric = result.columns.find((column) =>
+        /^(INTEGER|BIGINT|FLOAT|DOUBLE|DECIMAL)/.test(column.type),
+      );
+
+      if (dimension && metric) {
+        const data = await queryComparison(result, {
+          dimension: dimension.name,
+          metric: metric.name,
+          aggregation: "avg",
+          limit: 10,
+        });
+
+        setChartOption({
+          tooltip: {
+            trigger: "axis",
+          },
+          grid: {
+            left: 60,
+            right: 30,
+            top: 30,
+            bottom: 70,
+          },
+          xAxis: {
+            type: "category",
+            data: data.map((item) => item.label),
+            axisLabel: {
+              rotate: 35,
+            },
+          },
+          yAxis: {
+            type: "value",
+          },
+          series: [
+            {
+              type: "bar",
+              name: `Average ${metric.name}`,
+              data: data.map((item) => item.value),
+            },
+          ],
+        });
+      }
     } catch (err) {
       setError(err instanceof Error ? err.message : "Failed to load dataset.");
     } finally {
@@ -100,6 +153,13 @@ export function App() {
             <pre class="overflow-x-auto rounded-lg border border-zinc-200 bg-zinc-50 p-4 text-xs dark:border-zinc-800 dark:bg-zinc-900">
               {JSON.stringify(profile, null, 2)}
             </pre>
+          </section>
+        )}
+        {chartOption && (
+          <section class="mt-8 max-w-4xl">
+            <h2 class="mb-4 text-lg font-semibold">Data visualization</h2>
+
+            <ChartView option={chartOption} />
           </section>
         )}
       </main>
