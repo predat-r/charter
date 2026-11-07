@@ -1,5 +1,8 @@
-import { render } from 'preact'
+import { render } from 'preact';
+import { App } from './app';
+import { initializeTheme } from './lib/theme';
 import './styles/global.css';
-import { App } from './app.tsx'
 
-render(<App />, document.getElementById('app')!)
+initializeTheme();
+
+render(<App />, document.getElementById('app')!);
