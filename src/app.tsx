@@ -1,7 +1,8 @@
-import { useState } from "preact/hooks";
-import "./app.css";
-
 export function App() {
-
-  return <></>;
+  return (
+    <main>
+      <h1>Charter</h1>
+      <p>Explore your data locally.</p>
+    </main>
+  );
 }
