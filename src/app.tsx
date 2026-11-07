@@ -2,19 +2,28 @@ import { useState } from "preact/hooks";
 import { Header } from "./components/Header";
 import { FileUpload } from "./components/FileUpload";
 import { loadDataset, type DatasetInfo } from "./features/database/dataset";
+import {
+  profileDataset,
+  type DatasetProfile,
+} from "./features/analysis/profiler";
 
 export function App() {
   const [dataset, setDataset] = useState<DatasetInfo | null>(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  const [profile, setProfile] = useState<DatasetProfile | null>(null);
   async function handleFileSelected(file: File) {
     setLoading(true);
     setError(null);
     setDataset(null);
+    setProfile(null);
 
     try {
       const result = await loadDataset(file);
       setDataset(result);
+
+      const statistics = await profileDataset(result);
+      setProfile(statistics);
     } catch (err) {
       setError(err instanceof Error ? err.message : "Failed to load dataset.");
     } finally {
@@ -82,6 +91,15 @@ export function App() {
                 </tbody>
               </table>
             </div>
+          </section>
+        )}
+        {profile && (
+          <section class="mt-8 max-w-2xl">
+            <h2 class="mb-4 text-lg font-semibold">Statistical profile</h2>
+
+            <pre class="overflow-x-auto rounded-lg border border-zinc-200 bg-zinc-50 p-4 text-xs dark:border-zinc-800 dark:bg-zinc-900">
+              {JSON.stringify(profile, null, 2)}
+            </pre>
           </section>
         )}
       </main>
