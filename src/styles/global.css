@@ -1,4 +1,8 @@
 
+@import "tailwindcss";
+
+@custom-variant dark (&:where([data-theme="dark"], [data-theme="dark"] *));
+
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap');
 
 :root {
@@ -11,7 +15,7 @@
 
   --color-background: #ffffff;
   --color-surface: #f8fafc;
-  --color-text: #18181b;
+  --color-text: #010107;
   --color-text-muted: #71717a;
   --color-border: #e4e4e7;
   --color-primary: #2563eb;
