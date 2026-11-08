@@ -9,6 +9,8 @@ import {
 import { ChartView } from "./components/ChartView";
 import { queryComparison } from "./features/analysis/query";
 import type { EChartsCoreOption } from "echarts/core";
+import { createAnalysisPlan } from "./features/ai/planner";
+import type { AnalysisPlan } from "./features/ai/plan";
 
 export function App() {
   const [dataset, setDataset] = useState<DatasetInfo | null>(null);
@@ -18,12 +20,18 @@ export function App() {
   const [chartOption, setChartOption] = useState<EChartsCoreOption | null>(
     null,
   );
+  const [analysisPlan, setAnalysisPlan] = useState<AnalysisPlan | null>(null);
+  const [generating, setGenerating] = useState(false);
+  const [aiError, setAiError] = useState<string | null>(null);
   async function handleFileSelected(file: File) {
+    if (generating || loading) return;
     setLoading(true);
     setError(null);
     setDataset(null);
     setProfile(null);
     setChartOption(null);
+    setAnalysisPlan(null);
+    setAiError(null);
 
     try {
       const result = await loadDataset(file);
@@ -81,6 +89,25 @@ export function App() {
       setError(err instanceof Error ? err.message : "Failed to load dataset.");
     } finally {
       setLoading(false);
+    }
+  }
+
+  async function handleGenerateAnalyses() {
+    if (!dataset || !profile || generating) return;
+
+    setGenerating(true);
+    setAiError(null);
+    setAnalysisPlan(null);
+
+    try {
+      const plan = await createAnalysisPlan(dataset, profile);
+      setAnalysisPlan(plan);
+    } catch (error) {
+      setAiError(
+        error instanceof Error ? error.message : "Failed to generate analyses.",
+      );
+    } finally {
+      setGenerating(false);
     }
   }
 
@@ -160,6 +187,43 @@ export function App() {
             <h2 class="mb-4 text-lg font-semibold">Data visualization</h2>
 
             <ChartView option={chartOption} />
+          </section>
+        )}
+
+        {dataset && profile && (
+          <section class="mt-8">
+            <button
+              type="button"
+              disabled={generating || loading}
+              onClick={handleGenerateAnalyses}
+              class="rounded-md bg-blue-600 px-5 py-2.5 text-sm font-medium text-white hover:bg-blue-700 disabled:cursor-not-allowed disabled:opacity-50"
+            >
+              {generating ? "Generating analyses..." : "Generate analyses"}
+            </button>
+
+            {generating && (
+              <p role="status" class="mt-3 text-sm text-zinc-500">
+                Initializing the local AI model and analyzing metadata. The
+                first run may require a substantial model download.
+              </p>
+            )}
+
+            {aiError && (
+              <p role="alert" class="mt-3 text-sm text-red-600">
+                {aiError}
+              </p>
+            )}
+          </section>
+        )}
+        {analysisPlan && (
+          <section class="mt-8">
+            <h2 class="mb-4 text-lg font-semibold">
+              AI-generated analysis plan
+            </h2>
+
+            <pre class="overflow-x-auto rounded-lg border border-zinc-200 bg-zinc-50 p-4 text-xs dark:border-zinc-800 dark:bg-zinc-900">
+              {JSON.stringify(analysisPlan, null, 2)}
+            </pre>
           </section>
         )}
       </main>
