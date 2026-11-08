@@ -1,0 +1,25 @@
+base:
+  task: question-answering
+  student_model_name: LFM2.5-350M
+  teacher_model_name: zai.glm-5.3-low-thinking
+  variable_system_prompt: false
+
+evaluation:
+  llm_as_a_judge_model_name: zai.glm-5.3-low-thinking
+
+synthgen:
+  train_generation_target: 1900
+  test_generation_target: 0
+  output_is_json: true
+  validation_instructions: >-
+    Reject a generated example unless its assistant response is a valid JSON object
+    with exactly one charts array of 0 to 20 unique chart specifications.
+    The only acceptable top-level key is charts; reject empty object {}.
+    Allow an empty charts array only for datasets with no defensible charts.
+    Verify chartTypeId is 1-6, referenced column integer IDs are present,
+    axes have compatible types, aggregation follows the chart rules,
+    scores are decimal numbers within 0 and 1 in descending order, and no chart uses a
+    constant column. Reject semantically meaningless or misleading charts,
+    such as summing ratios or percentages, using identifiers as numerical
+    measures, and treating an arbitrary categorical code as a timeline.
+    Prefer domain-diverse, realistic, statistically plausible examples.
