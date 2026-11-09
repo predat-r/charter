@@ -1,0 +1,115 @@
+base:
+  enable_thinking: false
+  llm_num_parallel_requests: 8
+  random_seed: 451
+  should_expand_dataset: auto
+  student_model_name: LFM2.5-350M
+  task: question-answering
+  teacher_model_name: moonshotai.kimi-k3-max-thinking
+  variable_system_prompt: false
+  visual_task: false
+evaluation:
+  batch_size: 4
+  llm_as_a_judge_model_name: zai.glm-5.3-high-thinking
+  num_few_shot_examples: 1
+synthgen:
+  basic_mutators_to_use: []
+  clean_training_targets: false
+  generation_in_single_call: 2
+  generation_iteration_size: 64
+  match_generated_distribution_to_seed: false
+  max_tool_calls_per_turn: null
+  mutation_topics: []
+  mutator_update_frequency: 5
+  mutators: []
+  num_negative_exemplars_per_generation: 0
+  num_positive_exemplars_per_generation: 2
+  num_unlabelled_exemplars_per_generation: 0
+  output_is_json: true
+  parallel_llm_calls: false
+  teacher_max_tokens: 32000
+  teacher_temperature: 0.6
+  test_generation_target: 300
+  train_generation_target: 0
+  use_traces_as_context: false
+  validation_instructions: 'ACCEPT valid, useful, diverse, self-contained metadata-only
+    chart-planning examples. The input user turn must contain one parseable JSON metadata
+    object with dataset, positive integer rowCount, and columns, each with unique
+    integer id, nonempty unique name, type in {numeric,categorical,date}; nullCount
+    and distinctCount must be nonnegative integers when present, nullCount <= rowCount,
+    distinctCount <= rowCount-nullCount. Missing distinctCount is allowed: do not
+    reject solely because it is omitted. The assistant answer must be one valid JSON
+    object with only charts: an array of 0 through 20 distinct chart objects. Each
+    chart has exactly chartTypeId,x,y,aggregation,score; IDs must exist; scores numeric
+    in [0,1] sorted descending. Allowed chart specifications: 1 bar categorical x
+    numeric y and sum/avg/min/max/count aggregation; 2 line date x numeric y and sum/avg/min/max/count
+    aggregation, date must not be constant; 3 scatter different numeric x/y aggregation
+    null; 4 histogram numeric x y:null aggregation:null; 5 boxplot categorical x numeric
+    y aggregation:null; 6 heatmap different categorical x/y aggregation:count. Do
+    not invent columns or observations. Do not sum rates, ratios, prices, balances,
+    population or stock levels; do not use identifiers/codes as continuous measures;
+    avoid constant or mostly missing fields, redundant charts, extremely high-cardinality
+    categorical axes, and implausible comparisons. Plans must be analytically defensible
+    using metadata alone; do not require a particular chart count, domain, or ranking
+    score template. An empty chart list is correct when no chart is defensible. Favor
+    clearly different schemas and realistic cross-domain datasets; reject trivial
+    permutations or superficial renamings. Accept multiple reasonable visualization
+    choices: do not reject only because chart choices differ from exemplars.'
+  validation_max_answer_length: 8192
+  validation_max_total_length: 30000
+  validation_similarity_threshold: 0.88
+trace_processing:
+  committee_max_input_length: 250000
+  compress_job_description: false
+  min_coherence_score: 3
+  min_relevance_score: 4
+  num_test_relabelled: 200
+  num_train_relabelled: 200
+  observation_format: openai_messages
+  relabel: true
+  relabelling_committee_models: []
+  relevance_filtering: false
+  relevance_filtering_batch_size: 32
+  remove_system_prompt_from_traces: true
+  teacher_model_name: moonshotai.kimi-k3-max-thinking
+tuning:
+  awq_quantize_tuned_model: false
+  bf16: true
+  enable_trainer_internal_eval: false
+  gradient_accumulation_steps: 1
+  learning_rate: 5.0e-05
+  learning_rate_scheduler: linear
+  logging_steps: 0.01
+  lora_alpha_multiplier: 1
+  lora_r: 64
+  max_completion_length: 2048
+  memory_optimized_training: 0
+  num_few_shot_examples_student: 0
+  num_train_epochs: 4
+  per_device_eval_batch_size: 1
+  per_device_train_batch_size: 1
+  rlvr_dataset_size: 0.0
+  rlvr_epsilon: 0.0003
+  rlvr_epsilon_high: 0.0004
+  rlvr_gradient_accumulation_steps: 4
+  rlvr_importance_sampling_level: sequence
+  rlvr_learning_rate: 1.0e-05
+  rlvr_learning_rate_scheduler: constant
+  rlvr_llm_as_a_judge_model_name: moonshotai.kimi-k3-max-thinking
+  rlvr_num_generations: 6
+  rlvr_num_train_epochs: 1
+  rlvr_overlong_punishment_cache: null
+  rlvr_per_device_batch_size: 6
+  rlvr_reward_metric: llm-judge-reference-free
+  rlvr_scale_rewards: batch
+  rlvr_steps_per_generation: 16
+  rlvr_vllm_gpu_memory_utilization: 0.3
+  rlvr_vllm_importance_sampling_clip_max: 2.0
+  rlvr_vllm_importance_sampling_mode: token_truncate
+  rlvr_weight_decay: 0.0
+  save_steps: 0.25
+  train_eval_split: 0.2
+  use_lora: true
+  use_qlora: false
+  warmup_ratio: 0.05
+  weight_decay: 0.0

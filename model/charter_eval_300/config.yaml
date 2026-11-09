@@ -27,7 +27,7 @@ synthgen:
   output_is_json: true
   parallel_llm_calls: false
   teacher_max_tokens: 32000
-  teacher_temperature: 0.75
+  teacher_temperature: 0.6
   test_generation_target: 300
   train_generation_target: 0
   use_traces_as_context: false
