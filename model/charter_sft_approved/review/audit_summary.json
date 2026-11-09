@@ -1,0 +1,48 @@
+{
+  "approval": "Approved by user",
+  "sources": {
+    "train(1).jsonl": "94e4a7ee6da587b0a6d0a0cf6bb47ca04944965a891063e67e29f6b7f92e33e8",
+    "train(2).jsonl": "94e4a7ee6da587b0a6d0a0cf6bb47ca04944965a891063e67e29f6b7f92e33e8",
+    "test(2).jsonl": "433ec77fee8a5dad2f1cb81ce6ef54b98eadbb935befba8d28bc0e2207bdda80",
+    "test(1).jsonl": "3fb4929fb168a2f387ea25ac1298ea570d6ec7dbb2142de6eb29bc8bc894b9b3"
+  },
+  "output": {
+    "train": 1898,
+    "test": 399,
+    "strict_holdout": 397,
+    "train_charts": 8615,
+    "test_charts": 1535
+  },
+  "metadata_edits": {
+    "total_removed_distinctCount": 33,
+    "train": 32,
+    "test": 1,
+    "affected_train_rows": 31,
+    "affected_test_rows": 1
+  },
+  "unchanged": [
+    "All assistant chart-label JSON outputs",
+    "All system messages",
+    "All dataset column names/types/IDs",
+    "All non-defective metadata counts",
+    "All 399 test rows in main test.jsonl"
+  ],
+  "strict_holdout_exclusions": {
+    "original_one_based_test_rows": [
+      209,
+      356
+    ],
+    "rationale": "Column-name Jaccard similarity >=0.75 against training schemas; not proven leakage"
+  },
+  "outstanding_manual_semantic_review": "Heuristic flags were not treated as confirmed errors. No chart labels were altered or removed. Human/independent-judge review of analytic soundness remains recommended.",
+  "validation": {
+    "schema_and_output_validation_errors": [],
+    "exact_train_test_metadata_overlaps": 0,
+    "train_test_separated": true
+  },
+  "notes": [
+    "Dataset generation targets are zero to prevent generating additional synthetic cases as part of this uploaded configuration.",
+    "A dataset create/upload action by itself does not start model training.",
+    "System prompts and teacher-generated chart ranks preserved exactly."
+  ]
+}

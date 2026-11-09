@@ -1,0 +1,252 @@
+split,row,severity,reason,details
+train,61,review,sum_potentially_nonadditive,Energy - synthetic schema 01 chart 5 y=generation_mwh
+train,62,review,sum_potentially_nonadditive,Energy - synthetic schema 02 chart 6 y=generation_mwh
+train,64,review,sum_potentially_nonadditive,Energy - synthetic schema 04 chart 1 y=generation_mwh
+train,65,review,sum_potentially_nonadditive,Energy - synthetic schema 05 chart 1 y=generation_mwh
+train,66,review,sum_potentially_nonadditive,Energy - synthetic schema 06 chart 4 y=generation_mwh
+train,68,review,sum_potentially_nonadditive,Energy - synthetic schema 08 chart 2 y=generation_mwh
+train,69,review,sum_potentially_nonadditive,Energy - synthetic schema 09 chart 5 y=generation_mwh
+train,70,review,sum_potentially_nonadditive,Energy - synthetic schema 10 chart 6 y=generation_mwh
+train,113,definite,invalid_distinct_count,Airline operations — train scenario 1 | aircraft_id distinct=116 non_null=101
+train,118,definite,invalid_distinct_count,Library circulation — train scenario 2 | patron_id distinct=116 non_null=113
+train,122,definite,invalid_distinct_count,Water treatment — train scenario 2 | sample_id distinct=116 non_null=101
+train,135,definite,invalid_distinct_count,Forest ecology — train scenario 3 | tree_id distinct=116 non_null=101
+train,145,definite,invalid_distinct_count,Call center quality — train scenario 1 | agent_id distinct=291 non_null=281
+train,160,definite,invalid_distinct_count,Public parking — train scenario 4 | plate_number distinct=116 non_null=101
+train,175,definite,invalid_distinct_count,Hotel bookings — train scenario 3 | booking_id distinct=291 non_null=281
+train,185,definite,invalid_distinct_count,Semiconductor testing — train scenario 1 | die_id distinct=116 non_null=101
+train,187,definite,invalid_distinct_count,Semiconductor testing — train scenario 3 | die_id distinct=116 non_null=101
+train,197,definite,invalid_distinct_count,Consumer product returns — train scenario 1 | return_id distinct=291 non_null=281
+train,248,definite,invalid_distinct_count,Device registration export — train scenario 9 | diagnostic_blob distinct=611 non_null=582
+train,284,definite,invalid_distinct_count,IT asset registry - synthetic schema 11 | serial_number distinct=638 non_null=628
+train,303,review,sum_potentially_nonadditive,City bike-share trips — synthetic schema 07 chart 2 y=distance_km
+train,346,review,sum_potentially_nonadditive,Urban bike-share trips chart 1 y=duration_min
+train,375,review,identifier_as_categorical_axis,Factory sensor QC - synthetic schema 14 chart 2 x=line_code
+train,386,review,identifier_as_categorical_axis,Manufacturing IoT sensor readings chart 3 x=sensor_id
+train,386,review,identifier_as_categorical_axis,Manufacturing IoT sensor readings chart 5 x=sensor_id
+train,405,review,sum_potentially_nonadditive,Fleet telematics - synthetic schema 03 chart 2 y=distance_km
+train,415,definite,invalid_distinct_count,Survey - synthetic schema 02 | comments distinct=254 non_null=242
+train,438,review,identifier_as_categorical_axis,Wind farm SCADA hourly readings — train scenario 7 chart 3 x=turbine_id
+train,467,definite,invalid_distinct_count,Device registry export — synthetic schema 05 | technician_notes distinct=791 non_null=760
+train,483,review,identifier_as_categorical_axis,Assembly line telemetry - plant B chart 5 x=machine_code
+train,504,review,sum_potentially_nonadditive,Power grid monitoring — train scenario 6 chart 2 y=outage_minutes
+train,569,review,identifier_as_categorical_axis,Factory telemetry — synthetic scenario 3 chart 3 x=sensor_id
+train,584,review,sum_potentially_nonadditive,Wind turbine SCADA - synthetic schema 07 chart 2 y=energy_generated_kwh
+train,584,review,identifier_as_categorical_axis,Wind turbine SCADA - synthetic schema 07 chart 3 x=status_code
+train,584,review,identifier_as_categorical_axis,Wind turbine SCADA - synthetic schema 07 chart 4 x=status_code
+train,584,review,identifier_as_categorical_axis,Wind turbine SCADA - synthetic schema 07 chart 6 x=turbine_id
+train,584,review,identifier_as_heatmap_axis,Wind turbine SCADA - synthetic schema 07 chart 6 y=status_code
+train,590,definite,invalid_distinct_count,Smart meter snapshot - single day | meter_id distinct=3500 non_null=1000
+train,604,review,identifier_as_categorical_axis,Smart factory telemetry — synthetic schema 12 chart 2 x=machine_id
+train,607,review,sum_potentially_nonadditive,City bike-share trips — train scenario 5 chart 2 y=duration_min
+train,635,review,sum_potentially_nonadditive,City bike-share trips — train scenario 4 chart 1 y=duration_min
+train,655,review,identifier_as_heatmap_axis,Agriculture field trials - synthetic schema 11 chart 4 y=field_id
+train,672,review,identifier_as_categorical_axis,Wind farm telemetry — synthetic schema 03 chart 4 x=turbine_id
+train,672,review,identifier_as_categorical_axis,Wind farm telemetry — synthetic schema 03 chart 5 x=turbine_id
+train,677,review,sum_potentially_nonadditive,Bike-share trips — train scenario 7 chart 2 y=distance_km
+train,694,review,sum_potentially_nonadditive,"Energy - solar farm telemetry, synthetic schema 04 chart 1 y=kwh_generated"
+train,694,review,sum_potentially_nonadditive,"Energy - solar farm telemetry, synthetic schema 04 chart 2 y=kwh_generated"
+train,700,review,sum_potentially_nonadditive,Solar farm telemetry — synthetic schema 11 chart 1 y=kwh_generated
+train,704,review,identifier_as_categorical_axis,Wind farm turbine daily summary chart 3 x=turbine_id
+train,716,definite,invalid_distinct_count,SaaS account registry - synthetic batch 03 | referral_code distinct=295 non_null=288
+train,716,definite,invalid_distinct_count,SaaS account registry - synthetic batch 03 | notes distinct=268 non_null=13
+train,724,review,identifier_as_categorical_axis,Municipal water quality sampling chart 1 x=station_code
+train,728,definite,invalid_distinct_count,Support ticket archive export - synthetic schema 02 | agent_email distinct=880 non_null=860
+train,729,review,sum_potentially_nonadditive,Urban bikeshare trips - synthetic schema 07 chart 2 y=trip_duration_min
+train,743,review,sum_potentially_nonadditive,Courier delivery operations — synthetic schema 11 chart 4 y=parcel_weight_kg
+train,751,definite,invalid_distinct_count,IT asset registry — synthetic schema 02 | assigned_user_email distinct=405 non_null=395
+train,782,review,identifier_as_categorical_axis,Wind farm telemetry — train scenario 11 chart 2 x=turbine_id
+train,782,review,identifier_as_categorical_axis,Wind farm telemetry — train scenario 11 chart 5 x=turbine_id
+train,792,definite,invalid_distinct_count,IT asset registry: device inventory | warranty_status distinct=3 non_null=0
+train,848,definite,invalid_distinct_count,IoT device events - train scenario 6 | error_code distinct=4700 non_null=1800
+train,875,review,identifier_as_categorical_axis,Factory sensor readings — synthetic schema 15 chart 3 x=machine_id
+train,875,review,identifier_as_categorical_axis,Factory sensor readings — synthetic schema 15 chart 6 x=machine_id
+train,875,review,identifier_as_categorical_axis,Factory sensor readings — synthetic schema 15 chart 7 x=machine_id
+train,960,review,identifier_as_categorical_axis,Wind farm SCADA telemetry — train scenario 7 chart 2 x=turbine_code
+train,978,review,sum_potentially_nonadditive,Small-scale fisheries catch survey chart 1 y=catch_weight_kg
+train,978,review,sum_potentially_nonadditive,Small-scale fisheries catch survey chart 4 y=catch_weight_kg
+train,983,review,identifier_as_categorical_axis,Renewable grid telemetry — train scenario 7 chart 4 x=plant_code
+train,991,review,sum_potentially_nonadditive,Website analytics sessions FY24 chart 1 y=page_views
+train,991,review,sum_potentially_nonadditive,Website analytics sessions FY24 chart 3 y=page_views
+train,995,review,identifier_as_categorical_axis,Clinical trial visit monitoring - synthetic cohort 07 chart 4 x=site_code
+train,1055,definite,invalid_distinct_count,Municipal asset registry — train scenario 9 | serial_number distinct=796 non_null=795
+train,1095,review,sum_potentially_nonadditive,Logistics fleet — synthetic schema 04 chart 1 y=distance_km
+train,1116,review,identifier_as_categorical_axis,Energy - wind farm daily telemetry 14 chart 3 x=turbine_code
+train,1119,review,identifier_as_categorical_axis,IoT Sensors - synthetic schema 15 chart 1 x=sensor_id
+train,1123,review,sum_potentially_nonadditive,Bike-share trips - city scenario 4 chart 1 y=duration_min
+train,1127,definite,invalid_distinct_count,Lab equipment audit — synthetic schema 02 | serial_number distinct=40 non_null=38
+train,1173,definite,invalid_distinct_count,Museum collection catalog - synthetic schema 09 | acquisition_date distinct=80 non_null=10
+train,1178,review,identifier_as_categorical_axis,Weather station observations — synthetic schema 03 chart 3 x=station_code
+train,1178,review,identifier_as_categorical_axis,Weather station observations — synthetic schema 03 chart 6 x=station_code
+train,1221,definite,invalid_distinct_count,User account registry — train scenario 03 | email_hash distinct=8590 non_null=8588
+train,1227,review,sum_potentially_nonadditive,Last-mile delivery operations — metro fleet chart 4 y=distance_km
+train,1246,review,sum_potentially_nonadditive,Fleet telematics - synthetic schema 21 chart 1 y=distance_km
+train,1246,review,sum_potentially_nonadditive,Fleet telematics - synthetic schema 21 chart 4 y=distance_km
+train,1248,review,sum_potentially_nonadditive,Agriculture crop trials - train scenario 11 chart 3 y=harvest_weight_kg
+train,1283,review,sum_potentially_nonadditive,Crop trials - synthetic schema 03 chart 1 y=harvest_weight_kg
+train,1295,review,identifier_as_categorical_axis,Agri-climate field monitoring — train scenario 8 chart 5 x=station_code
+train,1301,review,sum_potentially_nonadditive,Residential energy pilot — train scenario 5 chart 5 y=outage_minutes
+train,1336,review,identifier_as_categorical_axis,Vineyard block monitoring chart 5 x=block_id
+train,1346,definite,invalid_distinct_count,Archival records - synthetic schema 01 | comment_text distinct=2195 non_null=2160
+train,1367,review,sum_potentially_nonadditive,City bike-share trips — train scenario 6 chart 1 y=trip_distance_km
+train,1367,review,sum_potentially_nonadditive,City bike-share trips — train scenario 6 chart 3 y=trip_distance_km
+train,1371,review,sum_potentially_nonadditive,E-commerce session analytics - synthetic schema 03 chart 1 y=page_views
+train,1371,review,sum_potentially_nonadditive,E-commerce session analytics - synthetic schema 03 chart 2 y=page_views
+train,1380,definite,invalid_distinct_count,Wealth management - daily portfolio snapshots | instrument_isin distinct=11500 non_null=8400
+train,1380,review,identifier_as_categorical_axis,Wealth management - daily portfolio snapshots chart 2 x=portfolio_code
+train,1380,review,identifier_as_categorical_axis,Wealth management - daily portfolio snapshots chart 6 x=portfolio_code
+train,1385,review,sum_potentially_nonadditive,Bike-share trip log - train scenario 8 chart 2 y=duration_min
+train,1422,definite,invalid_distinct_count,Asset registry — synthetic scenario 5 | serial_number distinct=300 non_null=298
+train,1428,review,sum_potentially_nonadditive,Last-mile delivery operations chart 1 y=packages_delivered
+train,1428,review,sum_potentially_nonadditive,Last-mile delivery operations chart 2 y=packages_delivered
+train,1452,definite,invalid_distinct_count,IT Operations - synthetic schema 02 | row_hash distinct=10000 non_null=9880
+train,1459,review,sum_potentially_nonadditive,Urban mobility - bike share trips chart 2 y=distance_km
+train,1467,review,sum_potentially_nonadditive,Fleet shipments - synthetic schema 14 chart 3 y=distance_km
+train,1468,review,sum_potentially_nonadditive,Utilities - synthetic schema 12 chart 6 y=outage_minutes
+train,1470,review,identifier_as_categorical_axis,Manufacturing - synthetic schema 05 chart 3 x=line_code
+train,1491,definite,invalid_distinct_count,IoT device registry — synthetic 02 | notes_code distinct=1150 non_null=560
+train,1590,review,sum_potentially_nonadditive,Urban bike-share trips - synthetic scenario 9 chart 1 y=duration_min
+train,1624,review,identifier_as_categorical_axis,Wind farm telemetry - synthetic schema 8 chart 5 x=turbine_id
+train,1634,definite,invalid_distinct_count,E-commerce catalog - synthetic schema 02 | description_text distinct=11980 non_null=11970
+train,1654,definite,invalid_distinct_count,Employee engagement survey — synthetic schema 09 | employee_email distinct=348 non_null=338
+train,1685,review,identifier_as_categorical_axis,Solar farm telemetry - plant performance chart 3 x=plant_code
+train,1693,review,sum_potentially_nonadditive,Regional grid telemetry - hourly chart 2 y=outage_events
+train,1697,review,identifier_as_categorical_axis,Precision agriculture — vineyard blocks chart 4 x=block_id
+train,1719,review,sum_potentially_nonadditive,Urban delivery fleet telematics — synthetic schema 11 chart 1 y=distance_km
+train,1719,review,sum_potentially_nonadditive,Urban delivery fleet telematics — synthetic schema 11 chart 3 y=distance_km
+train,1723,review,sum_potentially_nonadditive,Fleet telematics trips - train scenario 12 chart 1 y=distance_km
+train,1724,review,identifier_as_categorical_axis,Precision agriculture - synthetic schema 18 chart 3 x=field_id
+train,1724,review,identifier_as_categorical_axis,Precision agriculture - synthetic schema 18 chart 4 x=field_id
+train,1746,review,identifier_as_categorical_axis,University course enrollments chart 1 x=course_code
+train,1746,review,identifier_as_heatmap_axis,University course enrollments chart 4 y=course_code
+train,1758,review,identifier_as_categorical_axis,Factory sensor readings chart 2 x=machine_id
+train,1780,review,identifier_as_categorical_axis,Urban fleet telemetry — train scenario 7 chart 3 x=route_code
+train,1808,review,sum_potentially_nonadditive,Residential solar telemetry - synthetic schema 07 chart 1 y=energy_generated_kwh
+train,1808,review,sum_potentially_nonadditive,Residential solar telemetry - synthetic schema 07 chart 2 y=energy_generated_kwh
+train,1809,review,sum_potentially_nonadditive,Marine trawl survey chart 3 y=catch_weight_kg
+train,1813,review,sum_potentially_nonadditive,City bike-share trips - synthetic schema 12 chart 2 y=trip_duration_min
+train,1837,review,identifier_as_categorical_axis,Hospital laboratory orders chart 3 x=test_code
+train,1837,review,identifier_as_heatmap_axis,Hospital laboratory orders chart 5 y=test_code
+train,1838,review,identifier_as_categorical_axis,Retail inventory weekly snapshots chart 3 x=sku_category
+train,1877,review,identifier_as_categorical_axis,Ceramic tile production QC — train scenario 3 chart 1 x=kiln_id
+train,1877,review,identifier_as_categorical_axis,Ceramic tile production QC — train scenario 3 chart 5 x=kiln_id
+train,1898,review,identifier_as_categorical_axis,Manufacturing plant telemetry - synthetic schema 03 chart 3 x=machine_code
+test,22,review,sum_potentially_nonadditive,Sports: scores by teams chart 2 y=goals_scored
+test,92,review,identifier_as_categorical_axis,Water quality monitoring - river network survey chart 2 x=station_code
+test,93,review,identifier_as_categorical_axis,Water quality — distribution network samples chart 2 x=station_code
+test,93,review,identifier_as_categorical_axis,Water quality — distribution network samples chart 5 x=station_code
+test,98,review,identifier_as_categorical_axis,Urban water quality sampling chart 1 x=site_code
+test,98,review,identifier_as_categorical_axis,Urban water quality sampling chart 5 x=site_code
+test,101,review,identifier_as_categorical_axis,River water quality monitoring network chart 3 x=station_id
+test,101,review,identifier_as_categorical_axis,River water quality monitoring network chart 5 x=station_id
+test,109,review,identifier_as_categorical_axis,Municipal river water quality monitoring chart 2 x=station_code
+test,110,review,identifier_as_categorical_axis,Water quality monitoring — river stations chart 3 x=station_code
+test,110,review,identifier_as_categorical_axis,Water quality monitoring — river stations chart 5 x=station_code
+test,111,review,identifier_as_categorical_axis,Insurance claims extract chart 2 x=region_code
+test,111,review,identifier_as_categorical_axis,Insurance claims extract chart 5 x=region_code
+test,112,review,identifier_as_categorical_axis,Municipal water quality sampling — distribution network chart 2 x=station_id
+test,118,review,identifier_as_categorical_axis,Riverine water quality monitoring chart 2 x=station_code
+test,118,review,identifier_as_categorical_axis,Riverine water quality monitoring chart 5 x=station_code
+test,123,review,identifier_as_categorical_axis,Municipal water quality monitoring network chart 3 x=station_id
+test,123,review,identifier_as_categorical_axis,Municipal water quality monitoring network chart 5 x=station_id
+test,125,review,sum_potentially_nonadditive,Port authority incident log chart 4 y=damage_estimate_usd
+test,126,review,identifier_as_categorical_axis,Phase II hypertension trial - visit records chart 5 x=site_code
+test,129,review,identifier_as_categorical_axis,Estuary water-quality sensor network — holdout scenario 4 chart 3 x=site_code
+test,129,review,identifier_as_categorical_axis,Estuary water-quality sensor network — holdout scenario 4 chart 5 x=site_code
+test,129,review,identifier_as_categorical_axis,Estuary water-quality sensor network — holdout scenario 4 chart 6 x=site_code
+test,130,review,identifier_as_categorical_axis,Urban air quality sensor network (hourly readings) chart 2 x=station_code
+test,130,review,identifier_as_categorical_axis,Urban air quality sensor network (hourly readings) chart 4 x=station_code
+test,135,review,identifier_as_categorical_axis,River water quality monitoring — holdout scenario 5 chart 2 x=station_id
+test,137,review,identifier_as_categorical_axis,Municipal river water-quality monitoring (sensor and lab samples) chart 3 x=station_code
+test,137,review,identifier_as_categorical_axis,Municipal river water-quality monitoring (sensor and lab samples) chart 5 x=station_code
+test,145,review,identifier_as_categorical_axis,river water quality grab samples (state monitoring network) chart 2 x=site_code
+test,153,review,identifier_as_categorical_axis,River basin water quality sensor readings chart 2 x=station_code
+test,153,review,identifier_as_categorical_axis,River basin water quality sensor readings chart 5 x=station_code
+test,157,review,identifier_as_categorical_axis,Municipal drinking water quality — distribution network sampling chart 2 x=station_code
+test,160,review,identifier_as_categorical_axis,Injection molding line batch records chart 2 x=line_code
+test,163,review,identifier_as_categorical_axis,Water quality: river sensor network chart 2 x=station_code
+test,163,review,identifier_as_categorical_axis,Water quality: river sensor network chart 4 x=station_code
+test,164,review,identifier_as_categorical_axis,Willamette basin water-quality probe network chart 2 x=station_code
+test,168,review,identifier_as_categorical_axis,River basin water-quality monitoring chart 2 x=station_code
+test,172,review,identifier_as_categorical_axis,Riverside water quality sampling program chart 2 x=station_code
+test,172,review,identifier_as_categorical_axis,Riverside water quality sampling program chart 3 x=station_code
+test,172,review,identifier_as_categorical_axis,Riverside water quality sampling program chart 4 x=station_code
+test,173,review,identifier_as_categorical_axis,River network water quality monitoring chart 2 x=site_code
+test,174,review,identifier_as_categorical_axis,urban_river_water_quality_samples chart 2 x=site_code
+test,179,review,identifier_as_categorical_axis,River network water-quality monitoring chart 2 x=station_code
+test,179,review,identifier_as_categorical_axis,River network water-quality monitoring chart 5 x=station_code
+test,183,review,identifier_as_categorical_axis,State stream water-quality monitoring network chart 2 x=station_code
+test,189,review,identifier_as_categorical_axis,Municipal water quality — holdout scenario 2 chart 3 x=site_code
+test,189,review,identifier_as_categorical_axis,Municipal water quality — holdout scenario 2 chart 6 x=site_code
+test,192,review,identifier_as_categorical_axis,Water quality sensor network chart 2 x=station_code
+test,192,review,identifier_as_categorical_axis,Water quality sensor network chart 6 x=station_code
+test,196,review,identifier_as_categorical_axis,municipal water quality grab samples chart 2 x=station_code
+test,203,review,identifier_as_categorical_axis,Municipal river water-quality sensor network chart 3 x=station_code
+test,205,review,identifier_as_categorical_axis,Municipal drinking-water quality sampling chart 1 x=station_id
+test,205,review,identifier_as_categorical_axis,Municipal drinking-water quality sampling chart 5 x=station_id
+test,206,review,identifier_as_categorical_axis,Estuary water-quality sensor network (holdout scenario) chart 2 x=station_code
+test,206,review,identifier_as_categorical_axis,Estuary water-quality sensor network (holdout scenario) chart 5 x=station_code
+test,219,review,identifier_as_categorical_axis,Water quality monitoring network chart 2 x=station_code
+test,219,review,identifier_as_categorical_axis,Water quality monitoring network chart 5 x=station_code
+test,227,review,identifier_as_categorical_axis,Hypertension trial vitals — holdout scenario 9 chart 3 x=site_code
+test,228,review,identifier_as_categorical_axis,Municipal drinking water surveillance samples chart 2 x=station_code
+test,228,review,identifier_as_categorical_axis,Municipal drinking water surveillance samples chart 5 x=station_code
+test,229,review,sum_potentially_nonadditive,Power grid — holdout scenario 3 chart 5 y=outage_minutes
+test,232,review,identifier_as_categorical_axis,Water quality monitoring chart 3 x=station_id
+test,232,review,identifier_as_categorical_axis,Water quality monitoring chart 5 x=station_id
+test,234,review,identifier_as_categorical_axis,River water quality sensor network (hourly readings) chart 2 x=station_code
+test,235,review,identifier_as_categorical_axis,Coastal water quality sensor network — holdout 07 chart 5 x=station_code
+test,244,review,identifier_as_categorical_axis,Municipal water quality sampling (utility operations) chart 2 x=station_code
+test,244,review,identifier_as_categorical_axis,Municipal water quality sampling (utility operations) chart 3 x=station_code
+test,253,review,identifier_as_categorical_axis,Municipal water quality sensor network 2021-2023 chart 2 x=station_code
+test,260,review,identifier_as_categorical_axis,Municipal river water-quality monitoring network (one reading per station per day) chart 2 x=station_code
+test,260,review,identifier_as_categorical_axis,Municipal river water-quality monitoring network (one reading per station per day) chart 5 x=station_code
+test,270,definite,invalid_distinct_count,Procurement vendor registry — master data extract | tax_registration_no distinct=14876 non_null=14860
+test,271,review,identifier_as_categorical_axis,Vaccine post-market safety reports — holdout scenario 8 chart 4 x=dose_number
+test,276,review,identifier_as_categorical_axis,Air quality monitoring network — hourly readings chart 2 x=station_code
+test,276,review,identifier_as_categorical_axis,Air quality monitoring network — hourly readings chart 3 x=station_code
+test,280,review,sum_potentially_nonadditive,National maritime casualty incident register (1995–2024) chart 1 y=estimated_damage_eur
+test,280,review,sum_potentially_nonadditive,National maritime casualty incident register (1995–2024) chart 4 y=estimated_damage_eur
+test,283,review,identifier_as_categorical_axis,Estuary water quality survey — holdout scenario 11 chart 3 x=station_code
+test,286,review,identifier_as_categorical_axis,"Municipal river water quality monitoring, grab samples 2019-2023 chart 2 x=station_code"
+test,286,review,identifier_as_categorical_axis,"Municipal river water quality monitoring, grab samples 2019-2023 chart 5 x=station_code"
+test,287,review,identifier_as_categorical_axis,Water quality sensor network — holdout scenario 7 chart 2 x=station_code
+test,287,review,identifier_as_categorical_axis,Water quality sensor network — holdout scenario 7 chart 5 x=station_code
+test,295,review,identifier_as_categorical_axis,River network water quality monitoring (station-day samples) chart 3 x=station_code
+test,299,review,identifier_as_categorical_axis,River basin water-quality monitoring network chart 3 x=station_code
+test,299,review,identifier_as_categorical_axis,River basin water-quality monitoring network chart 5 x=station_code
+test,301,review,identifier_as_categorical_axis,Estuary water-quality monitoring network chart 3 x=station_code
+test,301,review,identifier_as_categorical_axis,Estuary water-quality monitoring network chart 4 x=station_code
+test,304,review,identifier_as_categorical_axis,Municipal drinking-water quality monitoring network chart 1 x=station_code
+test,304,review,identifier_as_categorical_axis,Municipal drinking-water quality monitoring network chart 4 x=station_code
+test,306,review,identifier_as_categorical_axis,River-basin water quality sensor network chart 2 x=station_code
+test,306,review,identifier_as_categorical_axis,River-basin water quality sensor network chart 4 x=station_code
+test,314,review,identifier_as_categorical_axis,Municipal watershed water quality readings chart 1 x=station_code
+test,314,review,identifier_as_categorical_axis,Municipal watershed water quality readings chart 5 x=station_code
+test,315,review,identifier_as_categorical_axis,Lake tributary grab-sample laboratory results chart 1 x=site_code
+test,315,review,identifier_as_categorical_axis,Lake tributary grab-sample laboratory results chart 5 x=site_code
+test,315,review,identifier_as_categorical_axis,Lake tributary grab-sample laboratory results chart 6 x=site_code
+test,327,review,identifier_as_categorical_axis,Lower Charles basin water quality samples chart 2 x=station_code
+test,327,review,identifier_as_categorical_axis,Lower Charles basin water quality samples chart 5 x=station_code
+test,328,review,identifier_as_categorical_axis,Drinking water quality network — holdout scenario 7 chart 3 x=station_code
+test,328,review,identifier_as_categorical_axis,Drinking water quality network — holdout scenario 7 chart 4 x=station_code
+test,329,review,sum_potentially_nonadditive,Port authority maritime incident reports chart 5 y=estimated_damage_usd
+test,336,review,identifier_as_categorical_axis,Municipal water quality sampling — regional monitoring network chart 2 x=site_code
+test,336,review,identifier_as_heatmap_axis,Municipal water quality sampling — regional monitoring network chart 5 y=site_code
+test,338,review,identifier_as_categorical_axis,Coastal water quality monitoring network — holdout chart 2 x=station_code
+test,345,review,identifier_as_categorical_axis,Urban river water quality monitoring network chart 3 x=station_id
+test,345,review,identifier_as_categorical_axis,Urban river water quality monitoring network chart 4 x=station_id
+test,348,review,identifier_as_categorical_axis,Insurance policy snapshot — holdout scenario 9 chart 4 x=state_code
+test,349,review,identifier_as_heatmap_axis,"Commercial property insurance claims (single carrier, ground-up) chart 3 y=state_code"
+test,351,review,identifier_as_categorical_axis,Power grid substation monitoring chart 3 x=substation_id
+test,365,review,identifier_as_categorical_axis,Auto physical-damage insurance claims — quarterly extract chart 3 x=region_code
+test,379,review,identifier_as_categorical_axis,Municipal water quality monitoring network — sensor readings chart 2 x=station_code
+test,383,review,identifier_as_categorical_axis,Urban river water quality monitoring chart 5 x=station_code
+test,388,review,identifier_as_categorical_axis,Municipal water quality sampling — district reservoirs chart 2 x=site_code
+test,389,review,identifier_as_categorical_axis,River basin water quality sensor network (public monitoring program) chart 2 x=station_code
+test,391,review,identifier_as_categorical_axis,Durum wheat variety trial chart 1 x=variety_code
+test,391,review,identifier_as_categorical_axis,Durum wheat variety trial chart 3 x=variety_code
+test,391,review,identifier_as_categorical_axis,Durum wheat variety trial chart 4 x=variety_code
+test,394,review,identifier_as_categorical_axis,Municipal water quality monitoring - grab samples chart 2 x=station_id
+test,394,review,identifier_as_heatmap_axis,Municipal water quality monitoring - grab samples chart 5 y=station_id
+test,396,review,identifier_as_categorical_axis,Municipal drinking-water sensor network — hourly QA archive chart 2 x=station_code

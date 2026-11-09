@@ -1,0 +1,34 @@
+split,row,dataset,column_id,column,original_distinct_count,row_count,null_count,maximum_possible_distinct_count,action
+train,113,Airline operations — train scenario 1,3,aircraft_id,116,120,19,101,Removed impossible distinctCount; no replacement invented
+train,118,Library circulation — train scenario 2,3,patron_id,116,120,7,113,Removed impossible distinctCount; no replacement invented
+train,122,Water treatment — train scenario 2,1,sample_id,116,120,19,101,Removed impossible distinctCount; no replacement invented
+train,135,Forest ecology — train scenario 3,2,tree_id,116,120,19,101,Removed impossible distinctCount; no replacement invented
+train,145,Call center quality — train scenario 1,1,agent_id,291,300,19,281,Removed impossible distinctCount; no replacement invented
+train,160,Public parking — train scenario 4,2,plate_number,116,120,19,101,Removed impossible distinctCount; no replacement invented
+train,175,Hotel bookings — train scenario 3,2,booking_id,291,300,19,281,Removed impossible distinctCount; no replacement invented
+train,185,Semiconductor testing — train scenario 1,4,die_id,116,120,19,101,Removed impossible distinctCount; no replacement invented
+train,187,Semiconductor testing — train scenario 3,4,die_id,116,120,19,101,Removed impossible distinctCount; no replacement invented
+train,197,Consumer product returns — train scenario 1,4,return_id,291,300,19,281,Removed impossible distinctCount; no replacement invented
+train,248,Device registration export — train scenario 9,2,diagnostic_blob,611,640,58,582,Removed impossible distinctCount; no replacement invented
+train,284,IT asset registry - synthetic schema 11,1,serial_number,638,640,12,628,Removed impossible distinctCount; no replacement invented
+train,415,Survey - synthetic schema 02,2,comments,254,260,18,242,Removed impossible distinctCount; no replacement invented
+train,467,Device registry export — synthetic schema 05,4,technician_notes,791,800,40,760,Removed impossible distinctCount; no replacement invented
+train,590,Smart meter snapshot - single day,1,meter_id,3500,1000,0,1000,Removed impossible distinctCount; no replacement invented
+train,716,SaaS account registry - synthetic batch 03,1,referral_code,295,300,12,288,Removed impossible distinctCount; no replacement invented
+train,716,SaaS account registry - synthetic batch 03,4,notes,268,300,287,13,Removed impossible distinctCount; no replacement invented
+train,728,Support ticket archive export - synthetic schema 02,1,agent_email,880,900,40,860,Removed impossible distinctCount; no replacement invented
+train,751,IT asset registry — synthetic schema 02,4,assigned_user_email,405,410,15,395,Removed impossible distinctCount; no replacement invented
+train,792,IT asset registry: device inventory,4,warranty_status,3,8000,8000,0,Removed impossible distinctCount; no replacement invented
+train,848,IoT device events - train scenario 6,4,error_code,4700,15000,13200,1800,Removed impossible distinctCount; no replacement invented
+train,1055,Municipal asset registry — train scenario 9,1,serial_number,796,800,5,795,Removed impossible distinctCount; no replacement invented
+train,1127,Lab equipment audit — synthetic schema 02,4,serial_number,40,40,2,38,Removed impossible distinctCount; no replacement invented
+train,1173,Museum collection catalog - synthetic schema 09,5,acquisition_date,80,150,140,10,Removed impossible distinctCount; no replacement invented
+train,1221,User account registry — train scenario 03,1,email_hash,8590,8600,12,8588,Removed impossible distinctCount; no replacement invented
+train,1346,Archival records - synthetic schema 01,3,comment_text,2195,2200,40,2160,Removed impossible distinctCount; no replacement invented
+train,1380,Wealth management - daily portfolio snapshots,4,instrument_isin,11500,8400,0,8400,Removed impossible distinctCount; no replacement invented
+train,1422,Asset registry — synthetic scenario 5,1,serial_number,300,300,2,298,Removed impossible distinctCount; no replacement invented
+train,1452,IT Operations - synthetic schema 02,4,row_hash,10000,10000,120,9880,Removed impossible distinctCount; no replacement invented
+train,1491,IoT device registry — synthetic 02,4,notes_code,1150,1200,640,560,Removed impossible distinctCount; no replacement invented
+train,1634,E-commerce catalog - synthetic schema 02,4,description_text,11980,12000,30,11970,Removed impossible distinctCount; no replacement invented
+train,1654,Employee engagement survey — synthetic schema 09,1,employee_email,348,350,12,338,Removed impossible distinctCount; no replacement invented
+test,270,Procurement vendor registry — master data extract,2,tax_registration_no,14876,15200,340,14860,Removed impossible distinctCount; no replacement invented
