@@ -1,0 +1,116 @@
+{
+  "source": "statsmodels packaged datasets, actual column values used for profiling",
+  "seed_count": 21,
+  "data": [
+    [
+      "sunspots",
+      "added",
+      "309 rows 2 columns 2 charts"
+    ],
+    [
+      "longley",
+      "added",
+      "16 rows 7 columns 3 charts"
+    ],
+    [
+      "macrodata",
+      "added",
+      "203 rows 14 columns 3 charts"
+    ],
+    [
+      "fair",
+      "added",
+      "6366 rows 9 columns 3 charts"
+    ],
+    [
+      "grunfeld",
+      "added",
+      "220 rows 5 columns 3 charts"
+    ],
+    [
+      "cancer",
+      "added",
+      "301 rows 2 columns 2 charts"
+    ],
+    [
+      "elnino",
+      "added",
+      "61 rows 13 columns 3 charts"
+    ],
+    [
+      "engel",
+      "added",
+      "235 rows 2 columns 2 charts"
+    ],
+    [
+      "heart",
+      "added",
+      "69 rows 3 columns 2 charts"
+    ],
+    [
+      "nile",
+      "added",
+      "100 rows 2 columns 2 charts"
+    ],
+    [
+      "randhie",
+      "added",
+      "20190 rows 10 columns 2 charts"
+    ],
+    [
+      "scotland",
+      "added",
+      "32 rows 8 columns 2 charts"
+    ],
+    [
+      "spector",
+      "added",
+      "32 rows 4 columns 2 charts"
+    ],
+    [
+      "stackloss",
+      "added",
+      "21 rows 4 columns 2 charts"
+    ],
+    [
+      "strikes",
+      "added",
+      "62 rows 2 columns 2 charts"
+    ],
+    [
+      "star98",
+      "added",
+      "303 rows 22 columns 3 charts"
+    ],
+    [
+      "anes96",
+      "added",
+      "944 rows 11 columns 2 charts"
+    ],
+    [
+      "committee",
+      "added",
+      "20 rows 6 columns 2 charts"
+    ],
+    [
+      "cpunish",
+      "added",
+      "17 rows 7 columns 2 charts"
+    ],
+    [
+      "interest_inflation",
+      "added",
+      "107 rows 4 columns 2 charts"
+    ],
+    [
+      "co2",
+      "added",
+      "2284 rows 2 columns 2 charts"
+    ],
+    [
+      "fertility",
+      "skip empty",
+      ""
+    ]
+  ]
+}
