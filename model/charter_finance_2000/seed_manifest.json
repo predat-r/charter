@@ -1,0 +1,1214 @@
+{
+  "manual_suite_templates": 43,
+  "manual_candidate_variants": 172,
+  "retained_financial_historical_examples": 38,
+  "final_unique_seed_examples": 210,
+  "synthetic_target_additional": 2000,
+  "test_examples_untouched": 399,
+  "coverage": [
+    {
+      "source": "Equity daily OHLCV by exchange session",
+      "variant": 0,
+      "columns": 16,
+      "charts": 5,
+      "rowCount": 120000
+    },
+    {
+      "source": "Equity daily OHLCV by exchange session",
+      "variant": 1,
+      "columns": 13,
+      "charts": 5,
+      "rowCount": 15000
+    },
+    {
+      "source": "Equity daily OHLCV by exchange session",
+      "variant": 2,
+      "columns": 14,
+      "charts": 3,
+      "rowCount": 8571
+    },
+    {
+      "source": "Equity daily OHLCV by exchange session",
+      "variant": 3,
+      "columns": 14,
+      "charts": 1,
+      "rowCount": 4800
+    },
+    {
+      "source": "Equity intraday order book snapshots",
+      "variant": 0,
+      "columns": 14,
+      "charts": 5,
+      "rowCount": 350000
+    },
+    {
+      "source": "Equity intraday order book snapshots",
+      "variant": 1,
+      "columns": 12,
+      "charts": 5,
+      "rowCount": 43750
+    },
+    {
+      "source": "Equity intraday order book snapshots",
+      "variant": 2,
+      "columns": 12,
+      "charts": 4,
+      "rowCount": 25000
+    },
+    {
+      "source": "Equity intraday order book snapshots",
+      "variant": 3,
+      "columns": 12,
+      "charts": 5,
+      "rowCount": 14000
+    },
+    {
+      "source": "Stock market corporate action register",
+      "variant": 0,
+      "columns": 14,
+      "charts": 4,
+      "rowCount": 60000
+    },
+    {
+      "source": "Stock market corporate action register",
+      "variant": 1,
+      "columns": 12,
+      "charts": 4,
+      "rowCount": 7500
+    },
+    {
+      "source": "Stock market corporate action register",
+      "variant": 2,
+      "columns": 12,
+      "charts": 3,
+      "rowCount": 4285
+    },
+    {
+      "source": "Stock market corporate action register",
+      "variant": 3,
+      "columns": 12,
+      "charts": 3,
+      "rowCount": 2400
+    },
+    {
+      "source": "Financial statements annual filings",
+      "variant": 0,
+      "columns": 18,
+      "charts": 5,
+      "rowCount": 80000
+    },
+    {
+      "source": "Financial statements annual filings",
+      "variant": 1,
+      "columns": 15,
+      "charts": 4,
+      "rowCount": 10000
+    },
+    {
+      "source": "Financial statements annual filings",
+      "variant": 2,
+      "columns": 15,
+      "charts": 4,
+      "rowCount": 5714
+    },
+    {
+      "source": "Financial statements annual filings",
+      "variant": 3,
+      "columns": 15,
+      "charts": 4,
+      "rowCount": 3200
+    },
+    {
+      "source": "Quarterly company earnings surprises",
+      "variant": 0,
+      "columns": 14,
+      "charts": 5,
+      "rowCount": 120000
+    },
+    {
+      "source": "Quarterly company earnings surprises",
+      "variant": 1,
+      "columns": 12,
+      "charts": 5,
+      "rowCount": 15000
+    },
+    {
+      "source": "Quarterly company earnings surprises",
+      "variant": 2,
+      "columns": 12,
+      "charts": 5,
+      "rowCount": 8571
+    },
+    {
+      "source": "Quarterly company earnings surprises",
+      "variant": 3,
+      "columns": 12,
+      "charts": 4,
+      "rowCount": 4800
+    },
+    {
+      "source": "Equity factor exposure panel",
+      "variant": 0,
+      "columns": 16,
+      "charts": 5,
+      "rowCount": 200000
+    },
+    {
+      "source": "Equity factor exposure panel",
+      "variant": 1,
+      "columns": 13,
+      "charts": 4,
+      "rowCount": 25000
+    },
+    {
+      "source": "Equity factor exposure panel",
+      "variant": 2,
+      "columns": 14,
+      "charts": 3,
+      "rowCount": 14285
+    },
+    {
+      "source": "Equity factor exposure panel",
+      "variant": 3,
+      "columns": 14,
+      "charts": 4,
+      "rowCount": 8000
+    },
+    {
+      "source": "Institutional holdings 13F position snapshots",
+      "variant": 0,
+      "columns": 12,
+      "charts": 4,
+      "rowCount": 450000
+    },
+    {
+      "source": "Institutional holdings 13F position snapshots",
+      "variant": 1,
+      "columns": 10,
+      "charts": 4,
+      "rowCount": 56250
+    },
+    {
+      "source": "Institutional holdings 13F position snapshots",
+      "variant": 2,
+      "columns": 10,
+      "charts": 3,
+      "rowCount": 32142
+    },
+    {
+      "source": "Institutional holdings 13F position snapshots",
+      "variant": 3,
+      "columns": 10,
+      "charts": 2,
+      "rowCount": 18000
+    },
+    {
+      "source": "ETF fund flows and NAV",
+      "variant": 0,
+      "columns": 14,
+      "charts": 5,
+      "rowCount": 100000
+    },
+    {
+      "source": "ETF fund flows and NAV",
+      "variant": 1,
+      "columns": 12,
+      "charts": 3,
+      "rowCount": 12500
+    },
+    {
+      "source": "ETF fund flows and NAV",
+      "variant": 2,
+      "columns": 12,
+      "charts": 5,
+      "rowCount": 7142
+    },
+    {
+      "source": "ETF fund flows and NAV",
+      "variant": 3,
+      "columns": 12,
+      "charts": 3,
+      "rowCount": 4000
+    },
+    {
+      "source": "Fixed income bond trade tape",
+      "variant": 0,
+      "columns": 16,
+      "charts": 5,
+      "rowCount": 400000
+    },
+    {
+      "source": "Fixed income bond trade tape",
+      "variant": 1,
+      "columns": 13,
+      "charts": 2,
+      "rowCount": 50000
+    },
+    {
+      "source": "Fixed income bond trade tape",
+      "variant": 2,
+      "columns": 14,
+      "charts": 4,
+      "rowCount": 28571
+    },
+    {
+      "source": "Fixed income bond trade tape",
+      "variant": 3,
+      "columns": 14,
+      "charts": 5,
+      "rowCount": 16000
+    },
+    {
+      "source": "Sovereign yield curves daily tenors",
+      "variant": 0,
+      "columns": 13,
+      "charts": 5,
+      "rowCount": 90000
+    },
+    {
+      "source": "Sovereign yield curves daily tenors",
+      "variant": 1,
+      "columns": 11,
+      "charts": 2,
+      "rowCount": 11250
+    },
+    {
+      "source": "Sovereign yield curves daily tenors",
+      "variant": 2,
+      "columns": 11,
+      "charts": 4,
+      "rowCount": 6428
+    },
+    {
+      "source": "Sovereign yield curves daily tenors",
+      "variant": 3,
+      "columns": 11,
+      "charts": 4,
+      "rowCount": 3600
+    },
+    {
+      "source": "Corporate credit rating migrations",
+      "variant": 0,
+      "columns": 14,
+      "charts": 5,
+      "rowCount": 55000
+    },
+    {
+      "source": "Corporate credit rating migrations",
+      "variant": 1,
+      "columns": 12,
+      "charts": 3,
+      "rowCount": 6875
+    },
+    {
+      "source": "Corporate credit rating migrations",
+      "variant": 2,
+      "columns": 12,
+      "charts": 4,
+      "rowCount": 3928
+    },
+    {
+      "source": "Corporate credit rating migrations",
+      "variant": 3,
+      "columns": 12,
+      "charts": 3,
+      "rowCount": 2200
+    },
+    {
+      "source": "Loan origination underwriting decisions",
+      "variant": 0,
+      "columns": 16,
+      "charts": 5,
+      "rowCount": 120000
+    },
+    {
+      "source": "Loan origination underwriting decisions",
+      "variant": 1,
+      "columns": 13,
+      "charts": 4,
+      "rowCount": 15000
+    },
+    {
+      "source": "Loan origination underwriting decisions",
+      "variant": 2,
+      "columns": 14,
+      "charts": 4,
+      "rowCount": 8571
+    },
+    {
+      "source": "Loan origination underwriting decisions",
+      "variant": 3,
+      "columns": 14,
+      "charts": 3,
+      "rowCount": 4800
+    },
+    {
+      "source": "Loan repayment and delinquency events",
+      "variant": 0,
+      "columns": 15,
+      "charts": 5,
+      "rowCount": 240000
+    },
+    {
+      "source": "Loan repayment and delinquency events",
+      "variant": 1,
+      "columns": 12,
+      "charts": 4,
+      "rowCount": 30000
+    },
+    {
+      "source": "Loan repayment and delinquency events",
+      "variant": 2,
+      "columns": 13,
+      "charts": 4,
+      "rowCount": 17142
+    },
+    {
+      "source": "Loan repayment and delinquency events",
+      "variant": 3,
+      "columns": 13,
+      "charts": 2,
+      "rowCount": 9600
+    },
+    {
+      "source": "Credit card fraud transaction log",
+      "variant": 0,
+      "columns": 13,
+      "charts": 5,
+      "rowCount": 800000
+    },
+    {
+      "source": "Credit card fraud transaction log",
+      "variant": 1,
+      "columns": 11,
+      "charts": 4,
+      "rowCount": 100000
+    },
+    {
+      "source": "Credit card fraud transaction log",
+      "variant": 2,
+      "columns": 11,
+      "charts": 3,
+      "rowCount": 57142
+    },
+    {
+      "source": "Credit card fraud transaction log",
+      "variant": 3,
+      "columns": 11,
+      "charts": 5,
+      "rowCount": 32000
+    },
+    {
+      "source": "Bank daily deposit and liquidity metrics",
+      "variant": 0,
+      "columns": 14,
+      "charts": 5,
+      "rowCount": 70000
+    },
+    {
+      "source": "Bank daily deposit and liquidity metrics",
+      "variant": 1,
+      "columns": 12,
+      "charts": 5,
+      "rowCount": 8750
+    },
+    {
+      "source": "Bank daily deposit and liquidity metrics",
+      "variant": 2,
+      "columns": 12,
+      "charts": 4,
+      "rowCount": 5000
+    },
+    {
+      "source": "Bank daily deposit and liquidity metrics",
+      "variant": 3,
+      "columns": 12,
+      "charts": 3,
+      "rowCount": 2800
+    },
+    {
+      "source": "Mortgage securitization pool surveillance",
+      "variant": 0,
+      "columns": 14,
+      "charts": 5,
+      "rowCount": 60000
+    },
+    {
+      "source": "Mortgage securitization pool surveillance",
+      "variant": 1,
+      "columns": 12,
+      "charts": 3,
+      "rowCount": 7500
+    },
+    {
+      "source": "Mortgage securitization pool surveillance",
+      "variant": 2,
+      "columns": 12,
+      "charts": 4,
+      "rowCount": 4285
+    },
+    {
+      "source": "Mortgage securitization pool surveillance",
+      "variant": 3,
+      "columns": 12,
+      "charts": 4,
+      "rowCount": 2400
+    },
+    {
+      "source": "Derivatives options chain daily greeks",
+      "variant": 0,
+      "columns": 16,
+      "charts": 5,
+      "rowCount": 250000
+    },
+    {
+      "source": "Derivatives options chain daily greeks",
+      "variant": 1,
+      "columns": 13,
+      "charts": 4,
+      "rowCount": 31250
+    },
+    {
+      "source": "Derivatives options chain daily greeks",
+      "variant": 2,
+      "columns": 14,
+      "charts": 5,
+      "rowCount": 17857
+    },
+    {
+      "source": "Derivatives options chain daily greeks",
+      "variant": 3,
+      "columns": 14,
+      "charts": 4,
+      "rowCount": 10000
+    },
+    {
+      "source": "Futures margin and settlement ledger",
+      "variant": 0,
+      "columns": 14,
+      "charts": 5,
+      "rowCount": 100000
+    },
+    {
+      "source": "Futures margin and settlement ledger",
+      "variant": 1,
+      "columns": 12,
+      "charts": 4,
+      "rowCount": 12500
+    },
+    {
+      "source": "Futures margin and settlement ledger",
+      "variant": 2,
+      "columns": 12,
+      "charts": 3,
+      "rowCount": 7142
+    },
+    {
+      "source": "Futures margin and settlement ledger",
+      "variant": 3,
+      "columns": 12,
+      "charts": 3,
+      "rowCount": 4000
+    },
+    {
+      "source": "Foreign exchange spot execution",
+      "variant": 0,
+      "columns": 13,
+      "charts": 5,
+      "rowCount": 300000
+    },
+    {
+      "source": "Foreign exchange spot execution",
+      "variant": 1,
+      "columns": 11,
+      "charts": 3,
+      "rowCount": 37500
+    },
+    {
+      "source": "Foreign exchange spot execution",
+      "variant": 2,
+      "columns": 11,
+      "charts": 5,
+      "rowCount": 21428
+    },
+    {
+      "source": "Foreign exchange spot execution",
+      "variant": 3,
+      "columns": 11,
+      "charts": 4,
+      "rowCount": 12000
+    },
+    {
+      "source": "Mutual fund performance and risk panel",
+      "variant": 0,
+      "columns": 16,
+      "charts": 5,
+      "rowCount": 45000
+    },
+    {
+      "source": "Mutual fund performance and risk panel",
+      "variant": 1,
+      "columns": 13,
+      "charts": 3,
+      "rowCount": 5625
+    },
+    {
+      "source": "Mutual fund performance and risk panel",
+      "variant": 2,
+      "columns": 14,
+      "charts": 5,
+      "rowCount": 3214
+    },
+    {
+      "source": "Mutual fund performance and risk panel",
+      "variant": 3,
+      "columns": 14,
+      "charts": 3,
+      "rowCount": 1800
+    },
+    {
+      "source": "Portfolio trade and execution cost records",
+      "variant": 0,
+      "columns": 14,
+      "charts": 5,
+      "rowCount": 140000
+    },
+    {
+      "source": "Portfolio trade and execution cost records",
+      "variant": 1,
+      "columns": 12,
+      "charts": 4,
+      "rowCount": 17500
+    },
+    {
+      "source": "Portfolio trade and execution cost records",
+      "variant": 2,
+      "columns": 12,
+      "charts": 3,
+      "rowCount": 10000
+    },
+    {
+      "source": "Portfolio trade and execution cost records",
+      "variant": 3,
+      "columns": 12,
+      "charts": 2,
+      "rowCount": 5600
+    },
+    {
+      "source": "Value at risk backtesting breaches",
+      "variant": 0,
+      "columns": 13,
+      "charts": 5,
+      "rowCount": 90000
+    },
+    {
+      "source": "Value at risk backtesting breaches",
+      "variant": 1,
+      "columns": 11,
+      "charts": 5,
+      "rowCount": 11250
+    },
+    {
+      "source": "Value at risk backtesting breaches",
+      "variant": 2,
+      "columns": 11,
+      "charts": 4,
+      "rowCount": 6428
+    },
+    {
+      "source": "Value at risk backtesting breaches",
+      "variant": 3,
+      "columns": 11,
+      "charts": 3,
+      "rowCount": 3600
+    },
+    {
+      "source": "Insurance claims severity development",
+      "variant": 0,
+      "columns": 14,
+      "charts": 5,
+      "rowCount": 180000
+    },
+    {
+      "source": "Insurance claims severity development",
+      "variant": 1,
+      "columns": 12,
+      "charts": 5,
+      "rowCount": 22500
+    },
+    {
+      "source": "Insurance claims severity development",
+      "variant": 2,
+      "columns": 12,
+      "charts": 3,
+      "rowCount": 12857
+    },
+    {
+      "source": "Insurance claims severity development",
+      "variant": 3,
+      "columns": 12,
+      "charts": 3,
+      "rowCount": 7200
+    },
+    {
+      "source": "Real estate investment property cash flows",
+      "variant": 0,
+      "columns": 15,
+      "charts": 5,
+      "rowCount": 60000
+    },
+    {
+      "source": "Real estate investment property cash flows",
+      "variant": 1,
+      "columns": 12,
+      "charts": 4,
+      "rowCount": 7500
+    },
+    {
+      "source": "Real estate investment property cash flows",
+      "variant": 2,
+      "columns": 13,
+      "charts": 5,
+      "rowCount": 4285
+    },
+    {
+      "source": "Real estate investment property cash flows",
+      "variant": 3,
+      "columns": 13,
+      "charts": 2,
+      "rowCount": 2400
+    },
+    {
+      "source": "Venture capital investment rounds",
+      "variant": 0,
+      "columns": 15,
+      "charts": 5,
+      "rowCount": 25000
+    },
+    {
+      "source": "Venture capital investment rounds",
+      "variant": 1,
+      "columns": 12,
+      "charts": 4,
+      "rowCount": 3125
+    },
+    {
+      "source": "Venture capital investment rounds",
+      "variant": 2,
+      "columns": 13,
+      "charts": 5,
+      "rowCount": 1785
+    },
+    {
+      "source": "Venture capital investment rounds",
+      "variant": 3,
+      "columns": 13,
+      "charts": 3,
+      "rowCount": 1000
+    },
+    {
+      "source": "Private equity fund cash flow transactions",
+      "variant": 0,
+      "columns": 16,
+      "charts": 5,
+      "rowCount": 90000
+    },
+    {
+      "source": "Private equity fund cash flow transactions",
+      "variant": 1,
+      "columns": 13,
+      "charts": 4,
+      "rowCount": 11250
+    },
+    {
+      "source": "Private equity fund cash flow transactions",
+      "variant": 2,
+      "columns": 14,
+      "charts": 3,
+      "rowCount": 6428
+    },
+    {
+      "source": "Private equity fund cash flow transactions",
+      "variant": 3,
+      "columns": 14,
+      "charts": 4,
+      "rowCount": 3600
+    },
+    {
+      "source": "Commodity inventory hedging valuation",
+      "variant": 0,
+      "columns": 14,
+      "charts": 5,
+      "rowCount": 85000
+    },
+    {
+      "source": "Commodity inventory hedging valuation",
+      "variant": 1,
+      "columns": 12,
+      "charts": 4,
+      "rowCount": 10625
+    },
+    {
+      "source": "Commodity inventory hedging valuation",
+      "variant": 2,
+      "columns": 12,
+      "charts": 4,
+      "rowCount": 6071
+    },
+    {
+      "source": "Commodity inventory hedging valuation",
+      "variant": 3,
+      "columns": 12,
+      "charts": 4,
+      "rowCount": 3400
+    },
+    {
+      "source": "Payment processor merchant settlements",
+      "variant": 0,
+      "columns": 14,
+      "charts": 5,
+      "rowCount": 480000
+    },
+    {
+      "source": "Payment processor merchant settlements",
+      "variant": 1,
+      "columns": 12,
+      "charts": 5,
+      "rowCount": 60000
+    },
+    {
+      "source": "Payment processor merchant settlements",
+      "variant": 2,
+      "columns": 12,
+      "charts": 3,
+      "rowCount": 34285
+    },
+    {
+      "source": "Payment processor merchant settlements",
+      "variant": 3,
+      "columns": 12,
+      "charts": 2,
+      "rowCount": 19200
+    },
+    {
+      "source": "Treasury cash forecast variances",
+      "variant": 0,
+      "columns": 13,
+      "charts": 5,
+      "rowCount": 36000
+    },
+    {
+      "source": "Treasury cash forecast variances",
+      "variant": 1,
+      "columns": 11,
+      "charts": 4,
+      "rowCount": 4500
+    },
+    {
+      "source": "Treasury cash forecast variances",
+      "variant": 2,
+      "columns": 11,
+      "charts": 3,
+      "rowCount": 2571
+    },
+    {
+      "source": "Treasury cash forecast variances",
+      "variant": 3,
+      "columns": 11,
+      "charts": 4,
+      "rowCount": 1440
+    },
+    {
+      "source": "Bank stress testing scenario outputs",
+      "variant": 0,
+      "columns": 14,
+      "charts": 5,
+      "rowCount": 70000
+    },
+    {
+      "source": "Bank stress testing scenario outputs",
+      "variant": 1,
+      "columns": 12,
+      "charts": 4,
+      "rowCount": 8750
+    },
+    {
+      "source": "Bank stress testing scenario outputs",
+      "variant": 2,
+      "columns": 12,
+      "charts": 3,
+      "rowCount": 5000
+    },
+    {
+      "source": "Bank stress testing scenario outputs",
+      "variant": 3,
+      "columns": 12,
+      "charts": 4,
+      "rowCount": 2800
+    },
+    {
+      "source": "Financial fraud suspicious activity cases",
+      "variant": 0,
+      "columns": 14,
+      "charts": 5,
+      "rowCount": 95000
+    },
+    {
+      "source": "Financial fraud suspicious activity cases",
+      "variant": 1,
+      "columns": 12,
+      "charts": 4,
+      "rowCount": 11875
+    },
+    {
+      "source": "Financial fraud suspicious activity cases",
+      "variant": 2,
+      "columns": 12,
+      "charts": 2,
+      "rowCount": 6785
+    },
+    {
+      "source": "Financial fraud suspicious activity cases",
+      "variant": 3,
+      "columns": 12,
+      "charts": 3,
+      "rowCount": 3800
+    },
+    {
+      "source": "IPO listing and underwriting book",
+      "variant": 0,
+      "columns": 15,
+      "charts": 5,
+      "rowCount": 26000
+    },
+    {
+      "source": "IPO listing and underwriting book",
+      "variant": 1,
+      "columns": 12,
+      "charts": 4,
+      "rowCount": 3250
+    },
+    {
+      "source": "IPO listing and underwriting book",
+      "variant": 2,
+      "columns": 13,
+      "charts": 3,
+      "rowCount": 1857
+    },
+    {
+      "source": "IPO listing and underwriting book",
+      "variant": 3,
+      "columns": 13,
+      "charts": 3,
+      "rowCount": 1040
+    },
+    {
+      "source": "Mergers and acquisitions announced deals",
+      "variant": 0,
+      "columns": 14,
+      "charts": 5,
+      "rowCount": 45000
+    },
+    {
+      "source": "Mergers and acquisitions announced deals",
+      "variant": 1,
+      "columns": 12,
+      "charts": 3,
+      "rowCount": 5625
+    },
+    {
+      "source": "Mergers and acquisitions announced deals",
+      "variant": 2,
+      "columns": 12,
+      "charts": 4,
+      "rowCount": 3214
+    },
+    {
+      "source": "Mergers and acquisitions announced deals",
+      "variant": 3,
+      "columns": 12,
+      "charts": 3,
+      "rowCount": 1800
+    },
+    {
+      "source": "Dividend policy company history",
+      "variant": 0,
+      "columns": 13,
+      "charts": 5,
+      "rowCount": 80000
+    },
+    {
+      "source": "Dividend policy company history",
+      "variant": 1,
+      "columns": 11,
+      "charts": 4,
+      "rowCount": 10000
+    },
+    {
+      "source": "Dividend policy company history",
+      "variant": 2,
+      "columns": 11,
+      "charts": 3,
+      "rowCount": 5714
+    },
+    {
+      "source": "Dividend policy company history",
+      "variant": 3,
+      "columns": 11,
+      "charts": 4,
+      "rowCount": 3200
+    },
+    {
+      "source": "PSX listed companies sector financial snapshot",
+      "variant": 0,
+      "columns": 15,
+      "charts": 5,
+      "rowCount": 18000
+    },
+    {
+      "source": "PSX listed companies sector financial snapshot",
+      "variant": 1,
+      "columns": 12,
+      "charts": 5,
+      "rowCount": 2250
+    },
+    {
+      "source": "PSX listed companies sector financial snapshot",
+      "variant": 2,
+      "columns": 13,
+      "charts": 5,
+      "rowCount": 1285
+    },
+    {
+      "source": "PSX listed companies sector financial snapshot",
+      "variant": 3,
+      "columns": 13,
+      "charts": 4,
+      "rowCount": 720
+    },
+    {
+      "source": "Brokerage commission and settlement ledger",
+      "variant": 0,
+      "columns": 12,
+      "charts": 5,
+      "rowCount": 320000
+    },
+    {
+      "source": "Brokerage commission and settlement ledger",
+      "variant": 1,
+      "columns": 10,
+      "charts": 4,
+      "rowCount": 40000
+    },
+    {
+      "source": "Brokerage commission and settlement ledger",
+      "variant": 2,
+      "columns": 10,
+      "charts": 4,
+      "rowCount": 22857
+    },
+    {
+      "source": "Brokerage commission and settlement ledger",
+      "variant": 3,
+      "columns": 10,
+      "charts": 4,
+      "rowCount": 12800
+    },
+    {
+      "source": "Corporate bond covenant monitoring",
+      "variant": 0,
+      "columns": 13,
+      "charts": 5,
+      "rowCount": 30000
+    },
+    {
+      "source": "Corporate bond covenant monitoring",
+      "variant": 1,
+      "columns": 11,
+      "charts": 1,
+      "rowCount": 3750
+    },
+    {
+      "source": "Corporate bond covenant monitoring",
+      "variant": 2,
+      "columns": 11,
+      "charts": 5,
+      "rowCount": 2142
+    },
+    {
+      "source": "Corporate bond covenant monitoring",
+      "variant": 3,
+      "columns": 11,
+      "charts": 3,
+      "rowCount": 1200
+    },
+    {
+      "source": "Cryptocurrency exchange market trade surveillance",
+      "variant": 0,
+      "columns": 13,
+      "charts": 5,
+      "rowCount": 150000
+    },
+    {
+      "source": "Cryptocurrency exchange market trade surveillance",
+      "variant": 1,
+      "columns": 11,
+      "charts": 4,
+      "rowCount": 18750
+    },
+    {
+      "source": "Cryptocurrency exchange market trade surveillance",
+      "variant": 2,
+      "columns": 11,
+      "charts": 5,
+      "rowCount": 10714
+    },
+    {
+      "source": "Cryptocurrency exchange market trade surveillance",
+      "variant": 3,
+      "columns": 11,
+      "charts": 3,
+      "rowCount": 6000
+    },
+    {
+      "source": "Financial dataset numeric identifier traps",
+      "variant": 0,
+      "columns": 13,
+      "charts": 5,
+      "rowCount": 10000
+    },
+    {
+      "source": "Financial dataset numeric identifier traps",
+      "variant": 1,
+      "columns": 11,
+      "charts": 3,
+      "rowCount": 1250
+    },
+    {
+      "source": "Financial dataset numeric identifier traps",
+      "variant": 2,
+      "columns": 11,
+      "charts": 4,
+      "rowCount": 714
+    },
+    {
+      "source": "Financial dataset numeric identifier traps",
+      "variant": 3,
+      "columns": 11,
+      "charts": 4,
+      "rowCount": 400
+    },
+    {
+      "source": "Stock price only and identifiers unplottable",
+      "variant": 0,
+      "columns": 6,
+      "charts": 0,
+      "rowCount": 1
+    },
+    {
+      "source": "Stock price only and identifiers unplottable",
+      "variant": 1,
+      "columns": 5,
+      "charts": 0,
+      "rowCount": 12
+    },
+    {
+      "source": "Stock price only and identifiers unplottable",
+      "variant": 2,
+      "columns": 5,
+      "charts": 0,
+      "rowCount": 20
+    },
+    {
+      "source": "Stock price only and identifiers unplottable",
+      "variant": 3,
+      "columns": 5,
+      "charts": 0,
+      "rowCount": 10
+    },
+    {
+      "source": "Security master identifier dictionary",
+      "variant": 0,
+      "columns": 7,
+      "charts": 0,
+      "rowCount": 50000
+    },
+    {
+      "source": "Security master identifier dictionary",
+      "variant": 1,
+      "columns": 6,
+      "charts": 0,
+      "rowCount": 6250
+    },
+    {
+      "source": "Security master identifier dictionary",
+      "variant": 2,
+      "columns": 6,
+      "charts": 0,
+      "rowCount": 3571
+    },
+    {
+      "source": "Security master identifier dictionary",
+      "variant": 3,
+      "columns": 6,
+      "charts": 0,
+      "rowCount": 2000
+    },
+    {
+      "source": "Sparse trading venue anomaly notes",
+      "variant": 0,
+      "columns": 7,
+      "charts": 0,
+      "rowCount": 2000
+    },
+    {
+      "source": "Sparse trading venue anomaly notes",
+      "variant": 1,
+      "columns": 6,
+      "charts": 0,
+      "rowCount": 250
+    },
+    {
+      "source": "Sparse trading venue anomaly notes",
+      "variant": 2,
+      "columns": 6,
+      "charts": 0,
+      "rowCount": 142
+    },
+    {
+      "source": "Sparse trading venue anomaly notes",
+      "variant": 3,
+      "columns": 6,
+      "charts": 0,
+      "rowCount": 80
+    },
+    {
+      "source": "Portfolio asset allocation percentage constraints",
+      "variant": 0,
+      "columns": 11,
+      "charts": 5,
+      "rowCount": 70000
+    },
+    {
+      "source": "Portfolio asset allocation percentage constraints",
+      "variant": 1,
+      "columns": 9,
+      "charts": 2,
+      "rowCount": 8750
+    },
+    {
+      "source": "Portfolio asset allocation percentage constraints",
+      "variant": 2,
+      "columns": 10,
+      "charts": 5,
+      "rowCount": 5000
+    },
+    {
+      "source": "Portfolio asset allocation percentage constraints",
+      "variant": 3,
+      "columns": 9,
+      "charts": 4,
+      "rowCount": 2800
+    }
+  ]
+}

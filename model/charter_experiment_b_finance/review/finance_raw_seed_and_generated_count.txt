@@ -1,0 +1,1 @@
+Finance download: 2083 rows = 210 seeds + 1873 synthetic generated rows.

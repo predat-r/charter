@@ -1,0 +1,2 @@
+finance_line,dataset,action,original_chart_index,original_chart,reason
+722,Residential mortgage loan-level monthly performance tape,remove_invalid_chart,0,"{""chartTypeId"":1,""x"":5,""y"":1,""aggregation"":""count"",""score"":0.94}",Bar chart requires categorical x and numeric y; loan_number is categorical y

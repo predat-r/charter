@@ -1,0 +1,22 @@
+{
+  "original_training_examples": 1898,
+  "finance_download_examples": 2083,
+  "finance_omitted_duplicates": 38,
+  "finance_label_charts_removed": 1,
+  "combined_training_examples": 3943,
+  "heldout_test_examples": 399,
+  "training_chart_count": 18303,
+  "chart_types": {
+    "4": 3286,
+    "2": 3063,
+    "1": 3323,
+    "6": 2373,
+    "3": 3088,
+    "5": 3170
+  },
+  "heuristic_flags_for_review": 251,
+  "train_test_exact_metadata_overlap": 0,
+  "train_test_name_type_schema_overlap": 0,
+  "structural_errors": 0,
+  "test_unchanged_sha256": "558cd11f24cbc10a7047d1d2f423180a8e90e1536bf6c480149bd3feaa4f8a7e"
+}
