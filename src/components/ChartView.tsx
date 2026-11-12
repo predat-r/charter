@@ -1,26 +1,41 @@
 
-import { useEffect, useRef } from 'preact/hooks';
+import { useEffect, useRef } from "preact/hooks";
 
-import * as echarts from 'echarts/core';
-import { BarChart, LineChart, ScatterChart } from 'echarts/charts';
+import * as echarts from "echarts/core";
+
+import {
+  BarChart,
+  LineChart,
+  ScatterChart,
+  BoxplotChart,
+  HeatmapChart,
+} from "echarts/charts";
+
 import {
   GridComponent,
   TooltipComponent,
   LegendComponent,
   DatasetComponent,
-} from 'echarts/components';
-import { SVGRenderer } from 'echarts/renderers';
+  DataZoomComponent,
+  VisualMapComponent,
+} from "echarts/components";
 
-import type { EChartsCoreOption } from 'echarts/core';
+import { SVGRenderer } from "echarts/renderers";
+
+import type { EChartsCoreOption } from "echarts/core";
 
 echarts.use([
   BarChart,
   LineChart,
   ScatterChart,
+  BoxplotChart,
+  HeatmapChart,
   GridComponent,
   TooltipComponent,
   LegendComponent,
   DatasetComponent,
+  DataZoomComponent,
+  VisualMapComponent,
   SVGRenderer,
 ]);
 
@@ -29,16 +44,21 @@ interface ChartViewProps {
   height?: number;
 }
 
-export function ChartView({ option, height = 360 }: ChartViewProps) {
+export function ChartView({
+  option,
+  height = 360,
+}: ChartViewProps) {
   const containerRef = useRef<HTMLDivElement>(null);
-  const chartRef = useRef<ReturnType<typeof echarts.init> | null>(null);
+  const chartRef =
+    useRef<ReturnType<typeof echarts.init> | null>(null);
 
   useEffect(() => {
     const container = containerRef.current;
+
     if (!container) return;
 
     const chart = echarts.init(container, undefined, {
-      renderer: 'svg',
+      renderer: "svg",
     });
 
     chartRef.current = chart;

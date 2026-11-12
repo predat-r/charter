@@ -1,76 +1,140 @@
 
 import { z } from "zod";
-import type { DatasetInfo } from "../database/dataset";
 
-export const AnalysisSchema = z
-  .object({
-    type: z.literal("category_comparison"),
-    title: z.string().min(1).max(100),
-    dimension: z.string().min(1),
-    metric: z.string().min(1),
-    aggregation: z.enum(["sum", "avg", "min", "max", "count"]),
-    chart: z.literal("bar"),
-  })
-  .strict();
+export const ColumnMetadataSchema = z.object({
+  id: z.number().int().nonnegative(),
+  name: z.string(),
+  type: z.enum(["numeric", "categorical", "date"]),
+  nullCount: z.number().int().nonnegative(),
+  distinctCount: z.number().int().nonnegative().optional(),
+});
 
-export const AnalysisPlanSchema = z
-  .object({
-    analyses: z.array(AnalysisSchema).min(1).max(3),
-  })
-  .strict();
+export const DatasetMetadataSchema = z.object({
+  dataset: z.string(),
+  rowCount: z.number().int().positive(),
+  columns: z.array(ColumnMetadataSchema),
+});
 
-export type Analysis = z.infer<typeof AnalysisSchema>;
-export type AnalysisPlan = z.infer<typeof AnalysisPlanSchema>;
+export const ChartSchema = z.object({
+  chartTypeId: z.number().int().min(1).max(6),
+  x: z.number().int().nonnegative(),
+  y: z.number().int().nonnegative().nullable(),
+  aggregation: z.enum(["sum", "avg", "min", "max", "count"]).nullable(),
+  score: z.number().min(0).max(1),
+}).strict();
 
-const NUMERIC_TYPES =
-  /^(U?TINYINT|U?SMALLINT|U?INTEGER|U?BIGINT|UHUGEINT|HUGEINT|FLOAT|DOUBLE|REAL|DECIMAL)/;
+export const ChartPlanSchema = z.object({
+  charts: z.array(ChartSchema).max(20),
+}).strict();
 
-export function validateAnalysisPlan(
-  input: unknown,
-  dataset: DatasetInfo,
-): AnalysisPlan {
-  const plan = AnalysisPlanSchema.parse(input);
+export type DatasetMetadata = z.infer<typeof DatasetMetadataSchema>;
+export type Chart = z.infer<typeof ChartSchema>;
+export type ChartPlan = z.infer<typeof ChartPlanSchema>;
 
+export interface ValidationResult {
+  charts: Chart[];
+  rejected: number;
+}
+
+export function validateChartPlan(
+  response: unknown,
+  metadata: DatasetMetadata,
+): ValidationResult {
+  const parsed = ChartPlanSchema.parse(response);
   const columns = new Map(
-    dataset.columns.map((column) => [column.name, column]),
+    metadata.columns.map((column) => [column.id, column]),
   );
 
-  for (const analysis of plan.analyses) {
-    const dimension = columns.get(analysis.dimension);
-    const metric = columns.get(analysis.metric);
+  const accepted: Chart[] = [];
+  const signatures = new Set<string>();
+  let rejected = 0;
 
-    if (!dimension || !metric) {
-      const unknownColumns = [
-        !dimension ? analysis.dimension : null,
-        !metric ? analysis.metric : null,
-      ].filter((name): name is string => name !== null);
+  for (const chart of parsed.charts) {
+    const x = columns.get(chart.x);
+    const y = chart.y === null
+      ? undefined
+      : columns.get(chart.y);
 
-      throw new Error(
-        `Analysis "${analysis.title}" references unknown column(s): ` +
-          unknownColumns.map((name) => `"${name}"`).join(", ") +
-          `. Dimension="${analysis.dimension}", ` +
-          `metric="${analysis.metric}".`,
-      );
+    let valid = Boolean(x);
+
+    if (x) {
+      switch (chart.chartTypeId) {
+        case 1: // Bar
+          valid =
+            x.type === "categorical" &&
+            y?.type === "numeric" &&
+            chart.aggregation !== null;
+          break;
+
+        case 2: // Line
+          valid =
+            x.type === "date" &&
+            (x.distinctCount === undefined ||
+              x.distinctCount >= 2) &&
+            y?.type === "numeric" &&
+            chart.aggregation !== null;
+          break;
+
+        case 3: // Scatter
+          valid =
+            x.type === "numeric" &&
+            y?.type === "numeric" &&
+            chart.x !== chart.y &&
+            chart.aggregation === null;
+          break;
+
+        case 4: // Histogram
+          valid =
+            x.type === "numeric" &&
+            chart.y === null &&
+            chart.aggregation === null;
+          break;
+
+        case 5: // Boxplot
+          valid =
+            x.type === "categorical" &&
+            y?.type === "numeric" &&
+            chart.aggregation === null;
+          break;
+
+        case 6: // Heatmap
+          valid =
+            x.type === "categorical" &&
+            y?.type === "categorical" &&
+            chart.x !== chart.y &&
+            chart.aggregation === "count";
+          break;
+      }
+
+      if (x.distinctCount === 1) {
+        valid = false;
+      }
     }
 
-    if (analysis.dimension === analysis.metric) {
-      throw new Error(
-        `Analysis "${analysis.title}" uses "${analysis.dimension}" ` +
-          "as both dimension and metric.",
-      );
+    if (y?.distinctCount === 1) {
+      valid = false;
     }
 
-    if (
-      analysis.aggregation !== "count" &&
-      !NUMERIC_TYPES.test(metric.type.toUpperCase())
-    ) {
-      throw new Error(
-        `Analysis "${analysis.title}" uses "${analysis.metric}" ` +
-          `(${metric.type}) with aggregation "${analysis.aggregation}". ` +
-          "The metric must be numeric.",
-      );
+    const signature = JSON.stringify([
+      chart.chartTypeId,
+      chart.x,
+      chart.y,
+      chart.aggregation,
+    ]);
+
+    if (!valid || signatures.has(signature)) {
+      rejected++;
+      continue;
     }
+
+    signatures.add(signature);
+    accepted.push(chart);
   }
 
-  return plan;
+  accepted.sort((a, b) => b.score - a.score);
+
+  return {
+    charts: accepted,
+    rejected,
+  };
 }

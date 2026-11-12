@@ -1,3 +1,4 @@
+
 import {
   CreateMLCEngine,
   prebuiltAppConfig,
@@ -7,19 +8,40 @@ import {
 
 const MODEL_ID = "Qwen2.5-1.5B-Instruct-q4f16_1-MLC";
 
+type ProgressListener = (report: InitProgressReport) => void;
+
+const listeners = new Set<ProgressListener>();
+
 let enginePromise: Promise<MLCEngineInterface> | null = null;
+let latestProgress: InitProgressReport | null = null;
 
-export type ModelProgressCallback = (report: InitProgressReport) => void;
+export function subscribeModelProgress(
+  listener: ProgressListener,
+): () => void {
+  listeners.add(listener);
 
-export function isWebGPUSupported(): boolean {
-  return typeof navigator !== "undefined" && "gpu" in navigator;
+  if (latestProgress) {
+    listener(latestProgress);
+  }
+
+  return () => {
+    listeners.delete(listener);
+  };
 }
 
-export async function getModel(
-  onProgress?: ModelProgressCallback,
-): Promise<MLCEngineInterface> {
-  if (!isWebGPUSupported()) {
-    throw new Error("WebGPU is not supported by this browser.");
+function publishProgress(report: InitProgressReport): void {
+  latestProgress = report;
+
+  for (const listener of listeners) {
+    listener(report);
+  }
+}
+
+async function getModel(): Promise<MLCEngineInterface> {
+  if (!navigator.gpu) {
+    throw new Error(
+      "WebGPU is unavailable. Use a WebGPU-enabled browser.",
+    );
   }
 
   if (!enginePromise) {
@@ -28,19 +50,16 @@ export async function getModel(
     );
 
     if (!available) {
-      throw new Error(`Model ${MODEL_ID} is not available.`);
+      throw new Error(
+        `Model ${MODEL_ID} is not supported by this WebLLM version.`,
+      );
     }
 
-    enginePromise = CreateMLCEngine(
-      MODEL_ID,
-      {
-        initProgressCallback: onProgress,
-      },
-      {
-        context_window_size: 8192,
-      },
-    ).catch((error) => {
+    enginePromise = CreateMLCEngine(MODEL_ID, {
+      initProgressCallback: publishProgress,
+    }).catch((error: unknown) => {
       enginePromise = null;
+      latestProgress = null;
       throw error;
     });
   }
@@ -57,11 +76,17 @@ export async function generateJSON(
 
   const completion = await engine.chat.completions.create({
     messages: [
-      { role: "system", content: systemPrompt },
-      { role: "user", content: userPrompt },
+      {
+        role: "system",
+        content: systemPrompt,
+      },
+      {
+        role: "user",
+        content: userPrompt,
+      },
     ],
     temperature: 0,
-    max_tokens: 512,
+    max_tokens: 2048,
     response_format: {
       type: "json_object",
       schema,
